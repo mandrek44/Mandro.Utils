@@ -45,6 +45,13 @@
     <Compile Include="EnumerableExtensions.cs" />
     <Compile Include="PatternLimitedStream.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setup\DirectoryHelper.cs" />
+    <Compile Include="Setup\GeneralInstaller.cs" />
+    <Compile Include="Setup\InstallationInfo.cs" />
+    <Compile Include="Setup\InstallerPaths.cs" />
+    <Compile Include="Setup\ServiceDescription.cs" />
+    <Compile Include="Setup\ServiceInstaller.cs" />
+    <Compile Include="Setup\Wow64Helper.cs" />
     <Compile Include="Web\HttpMultiPartStreamReader.cs" />
     <Compile Include="Web\MultiPartFormDataStream.cs" />
   </ItemGroup>
