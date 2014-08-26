@@ -55,6 +55,7 @@
     <Compile Include="StreamExtensions.cs" />
     <Compile Include="Web\HttpMultiPartStreamReader.cs" />
     <Compile Include="Web\MultiPartFormDataStream.cs" />
+    <Compile Include="Web\WebClientExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
