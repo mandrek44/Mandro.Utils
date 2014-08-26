@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Mandro.Utils.Owin</id>
+    <version>$version$</version>
+    <title>Owin extensions library.</title>
+    <authors>Mandro</authors>
+    <owners>Mandro</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Various util classes for owin.</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags></tags>
+  </metadata>
+</package>
