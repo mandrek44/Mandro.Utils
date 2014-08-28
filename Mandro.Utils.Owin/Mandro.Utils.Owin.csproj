@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DiagnosticsHelper.cs" />
     <Compile Include="HttpHandlerCollection.cs" />
     <Compile Include="IHttpService.cs" />
     <Compile Include="OwinService.cs" />
