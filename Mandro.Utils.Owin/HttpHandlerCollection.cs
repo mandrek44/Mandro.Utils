@@ -38,7 +38,7 @@ namespace Mandro.Utils.Owin
                 var firstMatch = _twoArgHandlers.Keys.Select(key => new Tuple<string, Match>(key, new Regex(key).Match(route))).First(match => match.Item2.Success);
                 var handler = _twoArgHandlers[firstMatch.Item1];
 
-                handler(requestBody, firstMatch.Item2.Groups[1].Value);
+                return await handler(requestBody, firstMatch.Item2.Groups[1].Value);
             }
 
             return null;
