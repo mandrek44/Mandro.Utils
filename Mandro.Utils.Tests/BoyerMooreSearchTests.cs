@@ -94,6 +94,65 @@ namespace Mandro.Utils.Tests
 
             Assert.That(shifts.Count, Is.LessThan(expectedShiftsLimit));
         }
+
+	    public class OtherType
+	    {
+		    public string S { get; set; }
+
+		    protected bool Equals(OtherType other)
+		    {
+			    return string.Equals(S, other.S);
+		    }
+
+		    public override bool Equals(object obj)
+		    {
+			    if (ReferenceEquals(null, obj))
+			    {
+				    return false;
+			    }
+			    if (ReferenceEquals(this, obj))
+			    {
+				    return true;
+			    }
+			    if (obj.GetType() != this.GetType())
+			    {
+				    return false;
+			    }
+			    return Equals((OtherType)obj);
+		    }
+
+		    public override int GetHashCode()
+		    {
+			    return (S != null ? S.GetHashCode() : 0);
+		    }
+
+		    public static bool operator ==(OtherType left, OtherType right)
+		    {
+			    return Equals(left, right);
+		    }
+
+		    public static bool operator !=(OtherType left, OtherType right)
+		    {
+			    return !Equals(left, right);
+		    }
+	    }
+
+		[Test]
+	    public void OtherTypeTests()
+	    {
+			// given
+
+
+
+			var text = new[] { new OtherType { S = "O" }, new OtherType() { S = "N" } };
+			var pattern = new[] { new OtherType { S = "O" }, new OtherType() { S = "N" } };
+
+			// when
+			int index = text.IndexOf(pattern);
+
+			// then
+			Assert.That(index, Is.EqualTo(0));
+	    }
         
         [Test, Ignore]
         public void TestPerformance()

@@ -40,8 +40,6 @@ namespace Mandro.Utils.Owin
 
                 return await handler(requestBody, firstMatch.Item2.Groups[1].Value);
             }
-
-            return null;
         }
 
         private void AddHandler(string routeString, Func<string, string, Task<object>> handler)

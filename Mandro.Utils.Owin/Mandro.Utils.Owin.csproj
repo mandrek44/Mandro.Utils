@@ -51,11 +51,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompositeOwinService.cs" />
     <Compile Include="DiagnosticsHelper.cs" />
     <Compile Include="HttpHandlerCollection.cs" />
     <Compile Include="IHttpService.cs" />
+    <Compile Include="IOwinHandler.cs" />
     <Compile Include="OwinService.cs" />
     <Compile Include="OwinServiceHelper.cs" />
+    <Compile Include="OwinServiceMiddleware.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

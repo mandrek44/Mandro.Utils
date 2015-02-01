@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -7,7 +8,7 @@ using Newtonsoft.Json;
 
 namespace Mandro.Utils.Owin
 {
-    public class OwinService : IHttpService
+	public class OwinService : IHttpService, IOwinHandler
     {
         private readonly Dictionary<string, HttpHandlerCollection> _methodHandlers;
 
